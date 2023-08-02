@@ -186,7 +186,6 @@ vec func(mat Z){
 
 // [[Rcpp::export]]
 mat RESULT(vec N,vec M,int index,float rho = 0,int nsim = 5000,float alpha = 0.05){
-  //有初值的参数后置
   int length_n = N.n_elem;
   int length_m = M.n_elem;
   mat RES(length_n,length_m,fill::none);
