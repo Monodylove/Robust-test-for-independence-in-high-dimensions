@@ -1,22 +1,5 @@
 library(Rcpp)
 sourceCpp("Robust_test.cpp")
-X <- c(1,2,3)
-Y <- c(1,0,3)
-cor.test(X,Y,method =  "spearman")
-spearman(X,Y)
-cor.test(X,Y,method =  "kendall")
-kendall(X,Y)
-
-Z <- matrix(rnorm(4*8),4,8) 
-Z
-S_Nm(Z)
-t_nm(Z)
-T_rho(Z)
-T3(Z)
-cor(Z,method =  "spearman")
-Spear_mat(Z)
-cor(Z,method =  "kendall")
-Kenda_mat(Z)
 
 t1 <- Sys.time()
 sN1 <- c(4,8,16,32,64,128,256)
@@ -55,13 +38,3 @@ RESULT(64,128,3,nsim = 500)
 RESULT(128,128,3,nsim = 500)
 t6 <- Sys.time()
 print(t6-t5)
-
-#test(4,4,1)[2]
-GenData(4,8,0)
-m=4
-N=64
-UP = m*(m-1)*(25*N^3-57*N^2-40*N+108)
-DOWN = 25*(N-1)^3*N*(N+1)
-Sigma_2_Nm = UP/DOWN
-Sigma_2_Nm
-m*m/N/N
